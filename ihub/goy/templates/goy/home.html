@@ -1,0 +1,25 @@
+{% extends 'goy/layout.html' %}
+
+{% block content %}
+
+
+
+<h1></h1>
+
+<ul>
+    {% for tarea in tareas %}
+        <li>{{ tarea }}</li>
+        <button type="button" class="btn btn-danger">
+            <a href="{% url 'eliminar' tarea.id %}" style="color: white; text-decoration: none;">Eliminar</a>
+        </button>
+        
+
+        <button type="button" class="btn btn-success">
+            <a href="{% url 'editar' tarea.id %}" style="color: white; text-decoration: none;">Editar</a>
+        </button>
+        
+
+    {% endfor %}
+</ul>
+{% endblock %}
+

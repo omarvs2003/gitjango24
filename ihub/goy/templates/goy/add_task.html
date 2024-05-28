@@ -1,0 +1,11 @@
+{% extends 'goy/layout.html' %}
+
+{% block content %}
+<h1>Añadir Tarea</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit"class="btn btn-success mt-2 ms-2">Añadir Tarea</button>
+
+</form>
+{% endblock %}
